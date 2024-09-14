@@ -1,0 +1,104 @@
+@import "mixin";
+@import "color";
+
+// 전체 박스 스타일 정의
+.box-common {
+  @include box-styles; // 믹스인 호출
+}
+
+// 박스 스타일 정의
+.box {
+  @extend .box-common;
+
+  &.box1 {
+    @include box-styles(
+      $border-color: $primary-color,
+      $background-color: $secondary-color
+    );
+  }
+
+  &.box2 {
+    @include box-styles(
+      $border-color: $secondary-color,
+      $background-color: $primary-color
+    );
+  }
+
+  &.box3 {
+    @include box-styles(
+      $border-color: $primary-color,
+      $background-color: $default-background
+    );
+  }
+}
+
+// SCSS 조건문 사용 예제
+$theme: light;
+
+@if $theme == light {
+  .box {
+    &.box1 {
+      background-color: lighten($primary-color, 20%);
+    }
+
+    &.box2 {
+      background-color: lighten($secondary-color, 20%);
+    }
+
+    &.box3 {
+      background-color: lighten($default-background, 20%);
+    }
+  }
+} @else {
+  .box {
+    &.box1 {
+      background-color: darken($primary-color, 20%);
+    }
+
+    &.box2 {
+      background-color: darken($secondary-color, 20%);
+    }
+
+    &.box3 {
+      background-color: darken($default-background, 20%);
+    }
+  }
+}
+
+// 미디어 쿼리 정의
+@media (max-width: 768px) {
+  .box {
+    &.box1 {
+      background-color: $tertiary-color; // 작은 화면에서는 색상 변경
+    }
+
+    &.box2 {
+      background-color: $primary-color;
+    }
+
+    &.box3 {
+      background-color: $secondary-color;
+    }
+  }
+}
+
+@media (min-width: 769px) {
+  .box {
+    &.box1 {
+      background-color: $secondary-color;
+    }
+
+    &.box2 {
+      background-color: $primary-color;
+    }
+
+    &.box3 {
+      background-color: $default-background;
+    }
+  }
+}
+
+// 컨테이너 스타일 정의
+.container {
+  padding: 20px;
+}

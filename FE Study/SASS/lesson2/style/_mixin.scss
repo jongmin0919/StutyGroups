@@ -1,0 +1,10 @@
+// 믹스인 정의
+@mixin box-styles($border-color: black, $background-color: white) {
+  border: 2px solid $border-color;
+  background-color: $background-color;
+  padding: 15px;
+  border-radius: 8px;
+  text-align: center;
+  font-size: 16px;
+  color: black;
+}

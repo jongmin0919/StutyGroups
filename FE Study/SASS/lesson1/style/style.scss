@@ -1,0 +1,29 @@
+.container {
+  background-color: green;
+
+  h1 {
+    color: pink;
+  }
+
+  p {
+    font-size: 15px;
+    color: white;
+
+    span {
+      font: {
+        family: sans-serif;
+        size: 30px;
+        weight: 900;
+      }
+    }
+  }
+
+  p > a {
+    color: yellow;
+    text-decoration: none;
+
+    &:hover {
+      color: orange;
+    }
+  }
+}

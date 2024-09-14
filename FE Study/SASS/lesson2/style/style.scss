@@ -1,0 +1,34 @@
+// 믹스인과 색상 변수를 임포트
+@import "mixin";
+@import "color";
+
+// 전체 박스 스타일 정의
+.box {
+  @include box-styles; // 믹스인 호출
+
+  &.box1 {
+    @include box-styles(
+      $border-color: $primary-color,
+      $background-color: $secondary-color
+    );
+  }
+
+  &.box2 {
+    @include box-styles(
+      $border-color: $secondary-color,
+      $background-color: $primary-color
+    );
+  }
+
+  &.box3 {
+    @include box-styles(
+      $border-color: $primary-color,
+      $background-color: lightgray
+    );
+  }
+}
+
+// 컨테이너 스타일 정의
+.container {
+  padding: 20px;
+}

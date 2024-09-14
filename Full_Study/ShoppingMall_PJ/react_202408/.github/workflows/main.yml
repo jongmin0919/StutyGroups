@@ -1,0 +1,52 @@
+name: Deploy to AWS
+
+on:
+  push:
+    branches:
+      - dev
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+
+    - name: Set up Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: '18.x' # Adjust based on your project's Node.js version
+
+    - name: Install dependencies
+      run: npm install # or yarn install
+
+    - name: Build project
+      run: npm run build # Modify this if you have a different build command
+
+    - name: Upload build artifacts
+      uses: actions/upload-artifact@v3
+      with:
+        name: build
+        path: |
+          build
+          dist
+          # Add any other directories that need to be deployed
+
+    - name: Deploy to AWS EC2
+      env:
+        AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+        AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+        AWS_REGION: 'us-east-1' # Modify this to your region
+        INSTANCE_ID: ${{ secrets.AWS_INSTANCE_ID }} # Instance ID of your EC2
+        KEY_PATH: ${{ secrets.SSH_KEY_PATH }} # SSH key path stored in secrets
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y sshpass
+
+        # Copy build artifacts to EC2 instance
+        sshpass -p "${{ secrets.SSH_PASSWORD }}" scp -o StrictHostKeyChecking=no -i $KEY_PATH -r ./build/* ec2-user@$INSTANCE_ID:/var/www/html/ # Adjust the path as needed
+
+    - name: Restart Server
+      run: |
+        sshpass -p "${{ secrets.SSH_PASSWORD }}" ssh -o StrictHostKeyChecking=no -i $KEY_PATH ec2-user@$INSTANCE_ID "sudo systemctl restart nginx" # Adjust command for your server setup

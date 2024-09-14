@@ -1,0 +1,66 @@
+// 공통 스타일 믹스인 정의 (기본값 포함)
+@mixin font-styles(
+  $weight: 400,
+  $size: 16px,
+  $family: (
+    "Arial",
+    sans-serif,
+  )
+) {
+  font-weight: $weight;
+  font-size: $size;
+  font-family: $family;
+
+  // @content를 사용하여 추가 스타일 블록을 삽입
+  @content;
+}
+
+// 색상 믹스인 정의 (기본값 포함)
+@mixin text-color($color: white) {
+  color: $color;
+
+  // @content를 사용하여 추가 스타일 블록을 삽입
+  @content;
+}
+
+// .container 스타일 정의
+.container {
+  background-color: green;
+  padding: 20px;
+  border-radius: 10px;
+
+  // h2 스타일
+  h2 {
+    @include text-color(blue); // 기본값을 덮어씁니다.
+    margin-bottom: 20px;
+  }
+
+  // p 스타일
+  p {
+    @include text-color(); // 기본값 white 사용
+    font-size: 14px;
+    margin-bottom: 10px;
+
+    // span 스타일
+    span {
+      @include font-styles(700, 18px) {
+        // @content를 사용하여 추가 스타일 블록을 삽입
+        background-color: yellow;
+      }
+      @include text-color(pink); // 기본값을 덮어씁니다.
+    }
+
+    // a 스타일
+    a {
+      text-decoration: none;
+
+      span {
+        @include font-styles(400, 30px) {
+          // @content를 사용하여 추가 스타일 블록을 삽입
+          text-decoration: underline;
+        }
+        @include text-color(red);
+      }
+    }
+  }
+}
