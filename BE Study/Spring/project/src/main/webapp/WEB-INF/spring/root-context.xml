@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:mybatis-spring="http://mybatis.org/schema/mybatis-spring"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context https://www.springframework.org/schema/context/spring-context.xsd http://mybatis.org/schema/mybatis-spring http://mybatis.org/schema/mybatis-spring.xsd">
+
+    <!-- 히카리 CP 환경 설정 -->
+    <bean id="hikariConfig" class="com.zaxxer.hikari.HikariConfig">
+        <property name="driverClassName" value="org.mariadb.jdbc.Driver"/> <!-- 대문자 'D' 수정 -->
+        <property name="jdbcUrl" value="jdbc:mariadb://localhost:3306/springdb"/>
+        <property name="username" value="springdbuser"/>
+        <property name="password" value="springdbuser"/>
+        <!-- 커넥션 풀이 활성화된 상태에서 30초가 지나면 무응답으로 판단하고 연결을 끊는 설정 -->
+        <property name="connectionTimeout" value="30000"/>
+        <!-- HikariCP 커넥션 풀의 최소 유휴(Idle) 커넥션 수를 설정하는 속성 -->
+        <property name="minimumIdle" value="2"/>
+    </bean>
+    <context:component-scan base-package="org.zerock.project.service"/>
+    <!-- 히카리 CP 커넥션 풀 (미리 생성된 DB 커넥션 풀 객체) 설정 -->
+    <bean name="dataSource" class="com.zaxxer.hikari.HikariDataSource" destroy-method="close">
+        <constructor-arg ref="hikariConfig"/> <!-- hikariConfig를 참조 -->
+    </bean>
+
+    <!-- 마이바티스 팩토리 생성 설정 classpath는 resources 폴더 경로를 의미. -->
+    <bean class = "org.mybatis.spring.SqlSessionFactoryBean">
+        <property name = "dataSource" ref = "dataSource"/>
+        <property name = "configLocation" value = "classpath:mybatis-config.xml"/>
+        <property name = "mapperLocations" value = "classpath:mapper/*.xml"/>
+    </bean>
+
+    <mybatis-spring:scan base-package="org.zerock.project.mapper"/>
+</beans>
