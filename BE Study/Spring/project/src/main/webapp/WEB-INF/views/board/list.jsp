@@ -26,9 +26,9 @@
                     <th>UpdateDate</th>
                 </tr>
                 </thead>
-                <tbody>
+                <tbody class = "tbody">
                 <c:forEach var="board" items="${list}">
-                    <tr>
+                    <tr data-bno = "${board.bno}">
                         <th><c:out value="${board.bno}"/></th>
                         <th><c:out value="${board.title}"/></th>
                         <th><c:out value="${board.writer}"/></th>
@@ -71,6 +71,13 @@
     if(result){
         myModal.show()
     }
+
+    document.querySelector(".tbody").addEventListener("click", (e) => {
+        const target = e.target.closest("tr")
+        const bno = target.dataset.bno
+
+        location = `/board/read/\${bno}`;
+    }, false)
 </script>
 
 <%@ include file="../includes/end.jsp"%>

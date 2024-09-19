@@ -28,6 +28,7 @@ public class BoardController {
         List<BoardVO> list = boardService.list();
         log.info(list);
         model.addAttribute("list", list);
+
     }
 
     @GetMapping("/{job}/{bno}")
@@ -64,4 +65,31 @@ public class BoardController {
         return "redirect:/board/list";
     }
 
+    @PostMapping("/remove/{bno}")
+    public String remove(@PathVariable("bno") Long bno, RedirectAttributes rttr){
+
+        BoardVO boardVO = boardService.get(bno);
+        boardVO.setBno(bno);
+        boardVO.setTitle("해당 글은 삭제된 글입니다.");
+        boardVO.setContent("해당 글은 삭제된 글입니다.");
+
+        log.info("boardVO : " + boardVO);
+
+        boardService.modify(boardVO);
+        rttr.addFlashAttribute("result", bno);
+
+        return "redirect:/board/read";
+    }
+
+    @PostMapping("/modify/{bno}")
+    public String modify(@PathVariable("bno") Long bno, BoardVO boardVO){
+
+        boardVO.setBno(bno);
+
+        log.info("boardVO : " + boardVO);
+
+        boardService.modify(boardVO);
+
+        return "redirect:/board/read/"+bno;
+    }
 }
