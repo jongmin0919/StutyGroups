@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Spacing</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous" />
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="./../style.css" />
+
+    <style>
+      .container > .row > div {
+        font-size: 40px;
+        text-align: center;
+      }
+
+      .row {
+        border: 3px solid red !important;
+      }
+
+      #margin,
+      #padding {
+        height: 20rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      #margin .row > .col-2,
+      #padding .row > .col-3 p {
+        border: 4px solid #fff;
+      }
+
+      .d-grid {
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+      }
+
+      .d-grid > div {
+        border: 4px solid #fff;
+        font-size: 40px;
+      }
+
+      .d-grid > div:nth-child(odd) {
+        background-color: #fb8c00;
+      }
+
+      .d-grid > div:nth-child(even) {
+        background-color: #00897b;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- 
+    The classes are named using the format {property}{sides}-{size} for xs 
+    and {property}{sides}-{breakpoint}-{size} for sm, md, lg, xl, and xxl.
+
+    ## Property
+    m - for classes that set margin
+    p - for classes that set padding
+
+    ## Sides
+    t - for classes that set margin-top or padding-top
+    b - for classes that set margin-bottom or padding-bottom
+    s - for classes that set margin-left or padding-left in LTR, margin-right or padding-right in RTL
+    e - for classes that set margin-right or padding-right in LTR, margin-left or padding-left in RTL
+    x - for classes that set both *-left and *-right
+    y - for classes that set both *-top and *-bottom
+    blank - for classes that set a margin or padding on all 4 sides of the element
+
+    ## Size
+    0 - for classes that eliminate the margin or padding by setting it to 0
+    1 - (by default) for classes that set the margin or padding to $spacer * .25
+    2 - (by default) for classes that set the margin or padding to $spacer * .5
+    3 - (by default) for classes that set the margin or padding to $spacer // 1rem
+    4 - (by default) for classes that set the margin or padding to $spacer * 1.5
+    5 - (by default) for classes that set the margin or padding to $spacer * 3
+    auto - for classes that set the margin to auto
+
+    ## negative margin
+    ex) .mt-n1 = margin-top: -0.25rem
+  -->
+    <h1 class="display-1">Margin Spacing</h1>
+    <div id="margin" class="container">
+      <div class="row">
+        <div class="col-2 mb-2 me-auto"><p>.mb-2 .me-auto</p></div>
+        <div class="col-2 mt-3"><p>.mt-3</p></div>
+        <div class="col-2 mb-3"><p>.mb-3</p></div>
+        <div class="col-2 me-3"><p>.me-3</p></div>
+        <div class="col-2 ms-auto"><p>.ms-auto</p></div>
+      </div>
+    </div>
+
+    <br /><br />
+
+    <h1 class="display-1">Padding Spacing</h1>
+    <div id="padding" class="container">
+      <div class="row">
+        <div class="col-3 pb-5"><p>.pb-5</p></div>
+        <div class="col-3 pt-5"><p>.pt-5</p></div>
+        <div class="col-3 ps-5"><p>.ps-5</p></div>
+        <div class="col-3 pe-5"><p>.pe-5</p></div>
+      </div>
+    </div>
+
+    <br /><br />
+
+    <h1 class="display-1">Gap</h1>
+    <div class="container">
+      <div class="d-grid gap-3">
+        <div class="p-2">Grid item 1</div>
+        <div class="p-2">Grid item 2</div>
+        <div class="p-2">Grid item 3</div>
+      </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8" crossorigin="anonymous"></script>
+  </body>
+</html>

@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Border & Shadow</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous" />
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="./../style.css" />
+
+    <style>
+      .container > .row > div {
+        font-size: 50px;
+        text-align: center;
+      }
+
+      .row {
+        border: 3px solid red !important;
+      }
+
+      #border {
+        position: relative;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+      }
+
+      #border span {
+        display: inline-block;
+        width: 8rem;
+        height: 8rem;
+        margin: 0.25rem;
+        background-color: rgb(80, 80, 80);
+      }
+
+      #border img {
+        margin-right: 0.75rem;
+      }
+
+      #border.border-style [class^='border'] {
+        border-width: 2px !important;
+      }
+
+      #shadow {
+        background-color: #fcfcfc;
+        margin-bottom: 3rem;
+        padding-top: 2rem;
+      }
+
+      #shadow > div {
+        background-color: #ffffff;
+        color: #222;
+        font-size: 2rem;
+        /* border: 1px solid #ddd; */
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1 class="display-1">Border</h1>
+
+    <div class="container">
+      <h2>Addictive & Subtractive</h2>
+      <div id="border" class="border-style">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
+      <br />
+
+      <div id="border" class="border-style">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
+      <br /><br />
+
+      <h2>Border Color</h2>
+      <div id="border" class="border-style">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
+      <br /><br />
+
+      <h2>Border Width</h2>
+      <div id="border" class="border-width">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
+      <br /><br />
+
+      <h2>Border Radius</h2>
+      <div id="border" class="border-radius">
+        <img src="https://via.placeholder.com/120" alt="..." />
+        <img src="https://via.placeholder.com/120" alt="..." />
+        <img src="https://via.placeholder.com/120" alt="..." />
+        <img src="https://via.placeholder.com/120" alt="..." />
+        <img src="https://via.placeholder.com/120" alt="..." />
+        <img src="https://via.placeholder.com/120" alt="..." />
+        <img src="https://via.placeholder.com/200x120" alt="..." />
+      </div>
+
+      <br /><br />
+      <h2>Border Radius Sizes</h2>
+      <div id="border" class="border-radius">
+        <img src="https://via.placeholder.com/120" alt="..." />
+        <img src="https://via.placeholder.com/120" alt="..." />
+        <img src="https://via.placeholder.com/120" alt="..." />
+        <img src="https://via.placeholder.com/120" alt="..." />
+      </div>
+    </div>
+
+    <br /><br />
+
+    <h1 class="display-1">Shadow</h1>
+
+    <div id="shadow" class="container bg-light">
+      <div class="p-3 mb-5 rounded">No shadow</div>
+      <div class="p-3 mb-5 rounded">Small shadow</div>
+      <div class="p-3 mb-5 rounded">Regular shadow</div>
+      <div class="p-3 mb-5 rounded">Larger shadow</div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8" crossorigin="anonymous"></script>
+  </body>
+</html>

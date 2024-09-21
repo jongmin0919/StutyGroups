@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Grid</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+
+  <!-- Main CSS -->
+  <link rel="stylesheet" href="./../style.css">
+
+  <style>
+    .container>.row>div {
+      font-size: 50px;
+      text-align: center;
+    }
+  </style>
+
+</head>
+
+<body>
+  <h1 class="display-1">Grid</h1>
+
+  <!-- 
+    Break point
+    xs: < 576px,
+    sm: >= 576px,
+    md: >= 768px,
+    lg: >= 992px,
+    xl: >= 1200px,
+    xxl: >= 1400px 
+  -->
+
+  <!-- container -->
+  <div class="container">
+    CONTAINER: Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla, tenetur animi debitis quod ratione ipsam
+    repellendus
+    beatae.
+    Atque, nostrum corporis magnam debitis minus nulla quibusdam deleniti earum qui ducimus consequatur?
+  </div>
+
+  <br>
+
+  <!-- container-fluid -->
+  <div class="container-fluid">
+    CONTAINER-FLUID: Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto corporis quia similique
+    voluptatibus, iure
+    doloremque
+    sint modi sit adipisci natus, officiis accusantium quasi itaque et magnam corrupti beatae optio debitis!
+  </div>
+
+  <br>
+
+  <!-- container-sm -->
+  <div class="container-sm">
+    CONTAINER-SM: Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla, tenetur animi debitis quod ratione
+    ipsam repellendus
+    beatae.
+    Atque, nostrum corporis magnam debitis minus nulla quibusdam deleniti earum qui ducimus consequatur?
+  </div>
+
+  <br>
+
+  <!-- container-md -->
+  <div class="container-md">
+    CONTAINER-MD: Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla, tenetur animi debitis quod ratione
+    ipsam repellendus
+    beatae.
+    Atque, nostrum corporis magnam debitis minus nulla quibusdam deleniti earum qui ducimus consequatur?
+  </div>
+
+  <br>
+
+  <!-- container-lg -->
+  <div class="container-lg">
+    CONTAINER-LG: Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla, tenetur animi debitis quod ratione
+    ipsam repellendus
+    beatae.
+    Atque, nostrum corporis magnam debitis minus nulla quibusdam deleniti earum qui ducimus consequatur?
+  </div>
+
+  <br>
+
+  <!-- container-xl -->
+  <div class="container-xl">
+    CONTAINER-XL: Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla, tenetur animi debitis quod ratione
+    ipsam repellendus
+    beatae.
+    Atque, nostrum corporis magnam debitis minus nulla quibusdam deleniti earum qui ducimus consequatur?
+  </div>
+
+  <br>
+
+  <!-- container-xxl -->
+  <div class="container-xxl">
+    CONTAINER-XXL: Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla, tenetur animi debitis quod ratione
+    ipsam repellendus
+    beatae.
+    Atque, nostrum corporis magnam debitis minus nulla quibusdam deleniti earum qui ducimus consequatur?
+  </div>
+
+  <br><br>
+
+  <!-- Grids -->
+  <div class="container">
+
+    <!-- col, col-sm, col-md, col-lg, col-xl, col-xxl -->
+    <div class="row">
+      <div class="col-xxl">1</div>
+      <div class="col-xxl">2</div>
+      <div class="col-xxl">3</div>
+    </div>
+
+    <div class="row">
+      <div class="col">1</div>
+      <div class="col">2</div>
+      <div class="col">3</div>
+      <div class="col">4</div>
+      <div class="col">5</div>
+      <div class="col">6</div>
+      <div class="col">7</div>
+      <div class="col">8</div>
+      <div class="col">9</div>
+      <div class="col">10</div>
+    </div>
+
+    <!-- Multiple col-* -->
+    <div class="row">
+      <div class="col">1</div>
+      <div class="col-6">2</div>
+      <div class="col">3</div>
+    </div>
+    <div class="row">
+      <div class="col-xl-2 col-md col-sm-4">1</div>
+      <div class="col-xl-6 col-md-6 col-sm-4">2</div>
+      <div class="col-xl-4 col-md col-sm-4">3</div>
+    </div>
+
+    <!-- col-*-auto : Variable width content -->
+    <div class="row">
+      <div class="col-lg-2">1</div>
+      <div class="col-md-auto">2 Lorem ipsum dolor sit amet.</div>
+      <div class="col-lg-2">3</div>
+    </div>
+
+    <!-- Row Column : row-cols-* -->
+    <div class="row row-cols-4">
+      <div class="col">1</div>
+      <div class="col">2</div>
+      <div class="col">3</div>
+      <div class="col">4</div>
+    </div>
+
+    <div class="row row-cols-3">
+      <div class="col">1</div>
+      <div class="col">2</div>
+      <div class="col">3</div>
+      <div class="col">4</div>
+    </div>
+
+    <div class="row row-cols-auto">
+      <div class="col">1</div>
+      <div class="col">2</div>
+      <div class="col">3</div>
+      <div class="col">4</div>
+    </div>
+
+    <div class="row row-cols-4">
+      <div class="col">1</div>
+      <div class="col">2</div>
+      <div class="col-6">3</div>
+      <div class="col">4</div>
+    </div>
+
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 row-cols-lg-3">
+      <div class="col">1</div>
+      <div class="col">2</div>
+      <div class="col">3</div>
+      <div class="col">4</div>
+    </div>
+
+  </div>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>

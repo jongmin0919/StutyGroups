@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Columns & Gutter</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+
+  <!-- Main CSS -->
+  <link rel="stylesheet" href="./../style.css">
+
+  <style>
+    .container>.row>div {
+      font-size: 50px;
+      text-align: center;
+    }
+
+    .row {
+      border: 3px solid red !important;
+    }
+
+    section {
+      border: 2px solid #ddd;
+    }
+
+    #align-items .row,
+    #align-self .row {
+      height: 500px;
+    }
+  </style>
+
+</head>
+
+<body>
+  <!-- JUSTIFY-CONTENT -->
+  <div id="justify-content" class="container">
+    <h1 class="display-1">Justify content</h1>
+    <br>
+    <!-- justify-content-center -->
+    <div class="row">
+      <div class="col-2">1</div>
+      <div class="col-2">2</div>
+      <div class="col-2">3</div>
+    </div>
+    <br>
+    <!-- justify-content-start -->
+    <div class="row">
+      <div class="col-2">1</div>
+      <div class="col-2">2</div>
+      <div class="col-2">3</div>
+    </div>
+    <br>
+    <!-- justify-content-end -->
+    <div class="row">
+      <div class="col-2">1</div>
+      <div class="col-2">2</div>
+      <div class="col-2">3</div>
+    </div>
+    <br>
+    <!-- justify-content-between -->
+    <div class="row">
+      <div class="col-2">1</div>
+      <div class="col-2">2</div>
+      <div class="col-2">3</div>
+    </div>
+    <br>
+    <!-- justify-content-around -->
+    <div class="row">
+      <div class="col-2">1</div>
+      <div class="col-2">2</div>
+      <div class="col-2">3</div>
+    </div>
+  </div>
+
+  <br>
+  <br>
+
+  <!-- ALIGN ITEMS -->
+  <div id="align-items" class="container">
+    <h1 class="display-1">Align items</h1>
+    <br>
+    <!-- align-items-center -->
+    <div class="row">
+      <div class="col">1</div>
+      <div class="col">2</div>
+      <div class="col">3</div>
+    </div>
+    <br>
+    <div class="row">
+      <div class="col">1</div>
+      <div class="col">2</div>
+      <div class="col">3</div>
+    </div>
+    <br>
+    <div class="row">
+      <div class="col">1</div>
+      <div class="col">2</div>
+      <div class="col">3</div>
+    </div>
+  </div>
+
+  <br>
+  <br>
+
+  <!-- ALIGN SELF -->
+  <div id="align-self" class="container">
+    <h1 class="display-1">Align Self</h1>
+    <br>
+    <div class="row align-items-center">
+      <div class="col">1</div>
+      <div class="col">2</div>
+      <div class="col">3</div>
+    </div>
+  </div>
+
+  <br>
+  <br>
+
+  <!-- Gutters -->
+  <h1 class="display-1">Gutters</h1>
+
+  <!-- gx gy 1 to 5 : px-4 or overflow-hidden  / g-0 : no-gutters -->
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <section>1</section>
+      </div>
+      <div class="col">
+        <section>2</section>
+      </div>
+    </div>
+  </div>
+
+  <br>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-6">
+        <section>1</section>
+      </div>
+      <div class="col-6">
+        <section>2</section>
+      </div>
+      <div class="col-6">
+        <section>3</section>
+      </div>
+      <div class="col-6">
+        <section>4</section>
+      </div>
+    </div>
+  </div>
+
+  <br>
+
+  <!-- Multiple gutters -->
+  <div class="container">
+    <div class="row row-cols-2 row-cols-lg-5">
+      <div class="col">
+        <section>1</section>
+      </div>
+      <div class="col">
+        <section>2</section>
+      </div>
+      <div class="col">
+        <section>3</section>
+      </div>
+      <div class="col">
+        <section>4</section>
+      </div>
+      <div class="col">
+        <section>5</section>
+      </div>
+      <div class="col">
+        <section>6</section>
+      </div>
+      <div class="col">
+        <section>7</section>
+      </div>
+      <div class="col">
+        <section>8</section>
+      </div>
+      <div class="col">
+        <section>9</section>
+      </div>
+      <div class="col">
+        <section>10</section>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>

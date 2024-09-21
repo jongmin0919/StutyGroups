@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Position - 1</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous" />
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="./../style.css" />
+
+    <style>
+      #position {
+        padding: 3rem;
+      }
+
+      #parent {
+        height: 70vh;
+        background-color: #fcfcfc;
+      }
+
+      #child {
+        width: 4rem;
+        height: 4rem;
+        background-color: #222;
+        border-radius: 0.25rem;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1 class="display-1">Position - 1</h1>
+
+    <!-- 
+    ## Position values
+    .position-static
+    .position-relative
+    .position-absolute
+    .position-fixed
+    .position-sticky
+
+    ## Position edge
+    {property} - {position}
+    .top-0 bottom-0 start-0 end-0
+    .top-50 bottom-50 start-50 end-50
+    .top-100 bottom-100 start-100 end-100
+
+    ## Position center
+    .translate-middle
+    .translate-middle-x
+    .translate-middle-y
+   -->
+
+    <div id="position" class="container">
+      <div id="parent">
+        <div id="child"></div>
+        <div id="child"></div>
+        <div id="child"></div>
+        <div id="child"></div>
+        <div id="child"></div>
+        <div id="child"></div>
+      </div>
+
+      <br /><br />
+
+      <div id="parent">
+        <div id="child"></div>
+        <div id="child"></div>
+        <div id="child"></div>
+        <div id="child"></div>
+        <div id="child"></div>
+        <div id="child"></div>
+        <div id="child"></div>
+        <div id="child"></div>
+        <div id="child"></div>
+      </div>
+
+      <br /><br />
+
+      <div id="parent">
+        <div id="child"></div>
+        <div id="child"></div>
+        <div id="child"></div>
+        <div id="child"></div>
+        <div id="child"></div>
+        <div id="child"></div>
+        <div id="child"></div>
+        <div id="child"></div>
+        <div id="child"></div>
+      </div>
+    </div>
+
+    <br /><br />
+
+    <!-- Position center : position vs flex -->
+    <section>
+      <div class="backdrop">
+        <div class="overlay">
+          <div class="overlay-text">
+            <h1 class="display-2">hello world</h1>
+            <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro, vero?</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <style>
+      .backdrop {
+        background-image: url('../bg.jpg');
+        margin-top: 10rem;
+        margin-bottom: 10rem;
+      }
+
+      .overlay {
+        background-color: rgba(0, 0, 0, 0.5);
+      }
+    </style>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8" crossorigin="anonymous"></script>
+  </body>
+</html>

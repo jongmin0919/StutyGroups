@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Typography</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous" />
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="./../style.css" />
+
+    <style>
+      #typo {
+        background-color: #fcfcfc;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+      }
+
+      #typo > * {
+        color: #333;
+      }
+
+      #typo h1.display-1 {
+        text-align: left;
+        text-transform: capitalize;
+        margin-bottom: inherit;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1 class="display-1">Typography</h1>
+
+    <div id="typo" class="container">
+      <div>
+        <h1>h1. Classic heading</h1>
+        <h2>h2. Classic heading</h2>
+        <h3>h3. Classic heading</h3>
+        <h4>h4. Classic heading</h4>
+        <h5>h5. Classic heading</h5>
+        <h6>h6. Classic heading</h6>
+      </div>
+
+      <br /><br />
+
+      <div>
+        <p class="h1">h1. Bootstrap heading</p>
+        <p class="h2">h2. Bootstrap heading</p>
+        <p class="h3">h3. Bootstrap heading</p>
+        <p class="h4">h4. Bootstrap heading</p>
+        <p class="h5">h5. Bootstrap heading</p>
+        <p class="h6">h6. Bootstrap heading</p>
+      </div>
+
+      <br /><br />
+
+      <div>
+        <h1 class="display-1">Display 1</h1>
+        <h1 class="display-2">Display 2</h1>
+        <h1 class="display-3">Display 3</h1>
+        <h1 class="display-4">Display 4</h1>
+        <h1 class="display-5">Display 5</h1>
+        <h1 class="display-6">Display 6</h1>
+      </div>
+
+      <br /><br />
+
+      <div>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum, ducimus?</p>
+        <p class="lead">P-lead. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Duis mollis, est non commodo luctus.</p>
+        <p>You can use the mark tag to <mark>highlight</mark> text.</p>
+        <p>You can use the mark tag to <span class="mark">highlight</span> text.</p>
+        <p><del>This line of text is meant to be treated as deleted text.</del></p>
+        <p><s>This line of text is meant to be treated as no longer accurate.</s></p>
+        <p><span class="text-decoration-line-through">This line of text is meant to be treated as no longer accurate.</span></p>
+        <p><ins>This line of text is meant to be treated as an addition to the document.</ins></p>
+        <p><u>This line of text will render as underlined.</u></p>
+        <p><span class="text-decoration-underline">This line of text will render as underlined.</span></p>
+        <p><small>This line of text is meant to be treated as fine print.</small></p>
+        <p><span class="small">This line of text is meant to be treated as fine print.</span></p>
+        <p><strong>This line rendered as bold text.</strong></p>
+        <p><b>This line rendered as bold text.</b></p>
+        <p class="fw-bold">This line rendered as bold text.</p>
+        <p><em>This line rendered as italicized text.</em></p>
+        <p><i>This line rendered as italicized text.</i></p>
+        <p class="fst-italic">This line rendered as italicized text.</p>
+      </div>
+
+      <br /><br />
+
+      <ul class="list-unstyled">
+        <li>Lorem ipsum dolor sit amet</li>
+        <li>Consectetur adipiscing elit</li>
+        <li>Integer molestie lorem at massa</li>
+        <li>Facilisis in pretium nisl aliquet</li>
+        <li>
+          Nulla volutpat aliquam velit
+          <ul>
+            <li>Phasellus iaculis neque</li>
+            <li>Purus sodales ultricies</li>
+            <li>Vestibulum laoreet porttitor sem</li>
+            <li>Ac tristique libero volutpat at</li>
+          </ul>
+          <ol>
+            <li>Phasellus iaculis neque</li>
+            <li>Purus sodales ultricies</li>
+            <li>Vestibulum laoreet porttitor sem</li>
+            <li>Ac tristique libero volutpat at</li>
+          </ol>
+        </li>
+        <li>Faucibus porta lacus fringilla vel</li>
+        <li>Aenean sit amet erat nunc</li>
+        <li>Eget porttitor lorem</li>
+      </ul>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8" crossorigin="anonymous"></script>
+  </body>
+</html>

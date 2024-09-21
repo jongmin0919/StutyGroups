@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tables</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous" />
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="./../style.css" />
+
+    <style>
+      #tables {
+        background-color: #fcfcfc;
+        color: #333;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1 class="display-1">Tables</h1>
+
+    <div id="tables" class="container table-responsive">
+      <table class="table table-striped table-hover table-bordered border-primary">
+        <!-- table-dark table-success table-borderless etc -->
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">First</th>
+            <th scope="col">Last</th>
+            <th scope="col">Email</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">1</th>
+            <td>Mark</td>
+            <td>Otto</td>
+            <td>mark@otto.com</td>
+          </tr>
+          <tr>
+            <th scope="row">2</th>
+            <td>Jacob</td>
+            <td>Thornton</td>
+            <td>jacob@fat.com</td>
+          </tr>
+          <tr>
+            <th scope="row">3</th>
+            <td>Larry</td>
+            <td>the Bird</td>
+            <td>jacob@twitter.com</td>
+          </tr>
+        </tbody>
+        <!-- table footer -->
+        <tfoot>
+          <tr>
+            <th scope="col">Footer</th>
+            <th scope="col">Footer</th>
+            <th scope="col">Footer</th>
+            <th scope="col">Footer</th>
+          </tr>
+        </tfoot>
+        <!-- Table Caption -->
+        <caption>
+          List of users
+        </caption>
+      </table>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+  </body>
+</html>
