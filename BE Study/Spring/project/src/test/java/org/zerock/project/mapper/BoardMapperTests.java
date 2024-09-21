@@ -6,8 +6,11 @@ import org.junit.jupiter.api.extension.ExtendWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
+import org.zerock.project.domain.Criteria;
 import org.zerock.project.mapper.BoardMapper;
 import org.zerock.project.domain.BoardVO;
+
+import java.util.List;
 
 @ExtendWith(SpringExtension.class)
 @ContextConfiguration("file:src/main/webapp/WEB-INF/spring/root-context.xml")
@@ -55,5 +58,13 @@ public class BoardMapperTests {
     public void testDelete(){
         Long bno = 10L;
         log.info("deleted count : " + boardMapper.delete(bno));
+    }
+
+    @Test
+    public void testPage(){
+        Criteria criteria = new Criteria();
+        List<BoardVO> list = boardMapper.getPage(criteria);
+
+        list.forEach(boardVO -> log.info(boardVO));
     }
 }

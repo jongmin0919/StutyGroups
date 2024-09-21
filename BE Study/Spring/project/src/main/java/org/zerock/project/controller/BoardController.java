@@ -4,12 +4,10 @@ import lombok.RequiredArgsConstructor;
 import lombok.extern.log4j.Log4j2;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 import org.zerock.project.domain.BoardVO;
+import org.zerock.project.domain.Criteria;
 import org.zerock.project.service.BoardService;
 
 import java.util.List;
@@ -23,12 +21,11 @@ public class BoardController {
     private final BoardService boardService;
 
     @GetMapping("/list")
-    public void list(Model model){
+    public void list(@ModelAttribute("cri") Criteria criteria, Model model){
         log.info("list....................");
-        List<BoardVO> list = boardService.list();
+        List<BoardVO> list = boardService.getList(criteria);
         log.info(list);
         model.addAttribute("list", list);
-
     }
 
     @GetMapping("/{job}/{bno}")
