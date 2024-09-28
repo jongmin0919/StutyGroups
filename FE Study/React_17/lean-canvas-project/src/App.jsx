@@ -1,15 +1,12 @@
 import React from 'react';
 import { Outlet } from 'react-router-dom';
+import Header from './Header';
 
 function App() {
   return (
     <>
-      <ul>
-        <li>Home</li>
-        <li>About</li>
-        <li>Contact</li>
-        <Outlet />
-      </ul>
+      <Header />
+      <Outlet />
     </>
   );
 }
