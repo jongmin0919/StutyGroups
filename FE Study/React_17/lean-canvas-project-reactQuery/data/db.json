@@ -1,0 +1,193 @@
+{
+  "canvases": [
+    {
+      "id": 1,
+      "title": "친환경 도시 농업",
+      "lastModified": "2023-06-15",
+      "category": "농업"
+    },
+    {
+      "id": 2,
+      "title": "AI 기반 건강 관리 앱",
+      "lastModified": "2023-06-10",
+      "category": "헬스케어"
+    },
+    {
+      "id": 3,
+      "title": "온디맨드 물류 서비스",
+      "lastModified": "2023-06-05",
+      "category": "물류"
+    },
+    {
+      "id": 4,
+      "title": "VR 가상 여행 서비스",
+      "lastModified": "2023-06-01",
+      "category": "여행"
+    },
+    {
+      "id": 5,
+      "title": "혁신적인 스마트홈 솔루션!!",
+      "lastModified": "2023-08-22",
+      "category": "신규",
+      "problem": {
+        "notes": [
+          {
+            "id": "0fb6e3f1-0153-435f-80bb-19f0b1aebda7",
+            "content": "ㅇㅁㄴㅇㅁㄴㅇㄴㅇㅁㅇㅁㄴ",
+            "color": "bg-green-300"
+          },
+          {
+            "id": "0f780992-5bc9-4f16-89f2-c7770219bd47",
+            "content": "",
+            "color": ""
+          }
+        ]
+      },
+      "customerSegments": {
+        "notes": [
+          {
+            "id": "cs2",
+            "content": "기술에 관심 있는 밀레니얼ㅇ 세대ㅇ",
+            "color": "bg-yellow-300"
+          },
+          {
+            "id": "cs3",
+            "content": "에너지 절약에 관심 있는 환경 의식적 소비자ㅇㅇ",
+            "color": "bg-pink-300"
+          }
+        ]
+      },
+      "valueProposition": {
+        "notes": [
+          {
+            "id": "vp2",
+            "content": "저렴한 초기 비용과 월 구독 모ㅇ델ㅇ",
+            "color": "bg-yellow-300"
+          },
+          {
+            "id": "vp3",
+            "content": "모든 주요 스마트홈 기기와 호환",
+            "color": "bg-blue-300"
+          }
+        ]
+      },
+      "solution": {
+        "notes": [
+          {
+            "id": "s2",
+            "content": "클라우드 기반 중앙 제어 시ㅇ스템ㅇ",
+            "color": "bg-blue-300"
+          },
+          {
+            "id": "s3",
+            "content": "모듈식 설계로 쉬운 확장성",
+            "color": "bg-pink-300"
+          }
+        ]
+      },
+      "unfairAdvantage": {
+        "notes": [
+          {
+            "id": "ua2",
+            "content": "주요 스마트홈 기기 제조업체와의 독점 파트너십ㅇㅇ",
+            "color": "bg-yellow-300"
+          }
+        ]
+      },
+      "channels": {
+        "notes": [
+          {
+            "id": "0fb6e3f1-0153-435f-80bb-19f0b1aebda7",
+            "content": "ㅇㅇ",
+            "color": "bg-pink-300"
+          }
+        ]
+      },
+      "keyMetrics": {
+        "notes": [
+          {
+            "id": "km2",
+            "content": "ㅇ고객 유지ㅇㅎ하한ㄱ그사랑글",
+            "color": "bg-yellow-300"
+          },
+          {
+            "id": "km3",
+            "content": "평균 에너지 절감률",
+            "color": "bg-pink-300"
+          }
+        ]
+      },
+      "costStructure": {
+        "notes": [
+          {
+            "id": "65ac9e55-ee5b-4a05-aab5-9e9614c4700d",
+            "content": "ㅇㅇ",
+            "color": "bg-blue-300"
+          }
+        ]
+      },
+      "revenueStreams": {
+        "notes": [
+          {
+            "id": "95d85fe5-0e58-4d13-af8c-0b16ad34e90a",
+            "content": "ㅇㅇ",
+            "color": "bg-yellow-300"
+          }
+        ]
+      },
+      "existingAlternatives": {
+        "notes": [
+          {
+            "id": "ea2",
+            "content": "개별 스마트 기기 사용ㅇㅇ",
+            "color": "bg-pink-300"
+          }
+        ]
+      },
+      "highLevelConcept": {
+        "notes": [
+          {
+            "id": "d2633f40-1e3c-4537-82e7-0cd48ef82875",
+            "content": "ㅇㅇ",
+            "color": "bg-green-300"
+          }
+        ]
+      },
+      "earlyAdopters": {
+        "notes": [
+          {
+            "id": "ea2",
+            "content": "에너지 절약 열성 지지자ㅇㅇ",
+            "color": "bg-pink-300"
+          }
+        ]
+      }
+    },
+    {
+      "title": "9b69_새로운 타이틀",
+      "lastModified": "2024-10-03 20:08:11",
+      "category": "신규",
+      "id": 6
+    },
+    {
+      "title": "a04b_새로운 타이틀",
+      "lastModified": "2024-10-03 20:57:30",
+      "category": "신규",
+      "id": 7,
+      "problem": {
+        "notes": []
+      }
+    },
+    {
+      "id": 8
+    },
+    {
+      "title": "new Canvas",
+      "id": 9
+    },
+    {
+      "title": "new Canvas",
+      "id": 10
+    }
+  ]
+}
